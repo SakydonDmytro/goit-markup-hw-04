@@ -10,7 +10,7 @@
     --heroic-button-hover:#188CE8;
     --bottom-links-color: rgba(255, 255, 255, 0.6);
     --head-border-line-color: #ECECEC;
-    --heroic-gradient: rgba(47, 48, 58, 0.4);
+    --heroic-gradient: 2F303A;
 }
 
 /*~~~~~~~~~~~~~~~~~~
@@ -174,8 +174,14 @@ heroic styles
     margin-left: auto;
     margin-right: auto;
     background-color: var(--heroic-background-color);
-    background-image: url(../images/heroic/heroic-head.png);
-    background-image: linear-gradient(var(--heroic-gradient),var(--heroic-gradient));
+    background-image: url(../images/heroic/heroic.png),
+        linear-gradient(to bottom,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4));
+    
+    
+    /* background-image: url(../images/heroic/heroic.png); */
+
     background-repeat: no-repeat;    
     background-position: center;
     background-size: cover;
