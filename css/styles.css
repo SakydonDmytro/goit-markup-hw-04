@@ -225,7 +225,7 @@ feauter styles
  ~~~~~~~~~~~*/
 
 .feauters-head {
-    visibility: hidden;
+    /* visibility: hidden; */
 }
 .feauters-list {
     list-style-type: none;
@@ -389,7 +389,7 @@ portfolio part
     display: flex;
     justify-content: center;
     list-style-type: none;
-    padding-bottom: 50px;
+    margin-bottom: 50px;
 }
 .filter-button {
     min-width: 73px;
