@@ -5,11 +5,12 @@
     --main-background-color: #FFFFFF;
     --secobdary-background-color: #E5E5E5;
     --third-background-color:#F5F4FA;
-    --heroic-background-color: #2F303A;;
+    --heroic-background-color: #2F303A;
     --main-hover-color: #2196F3;
     --heroic-button-hover:#188CE8;
     --bottom-links-color: rgba(255, 255, 255, 0.6);
     --head-border-line-color: #ECECEC;
+    --heroic-gradient: rgba(47, 48, 58, 0.4);
 }
 
 /*~~~~~~~~~~~~~~~~~~
@@ -169,7 +170,17 @@ heroic styles
 */
 
 .heroic {
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
     background-color: var(--heroic-background-color);
+    background-image: url(../images/heroic/heroic-head.png);
+    background-image: linear-gradient(var(--heroic-gradient),var(--heroic-gradient));
+    background-repeat: no-repeat;    
+    background-position: center;
+    background-size: cover;
+    
+
     padding-top: 200px;
     padding-bottom: 200px;
 }
@@ -439,6 +450,15 @@ portfolio part
     box-sizing: border-box;
     
 }
+.portfolio-item:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px 
+    rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.portfolio-item-box:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px 
+    rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
 .portfolio-item:nth-child(3n) {
     margin-right: 0;
 }
@@ -465,6 +485,7 @@ portfolio part
 }
 .portfolio-item-box {
     text-decoration: none;
+    display: inline-block;
 }
 .portfolio-item-class {
     font-size: 16px;
