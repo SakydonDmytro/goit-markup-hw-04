@@ -11,6 +11,7 @@
     --bottom-links-color: rgba(255, 255, 255, 0.6);
     --head-border-line-color: #ECECEC;
     --heroic-gradient: rgba(47, 48, 58, 0.4);
+    --social-icon-color:#AFB1B8;
 }
 
 /*~~~~~~~~~~~~~~~~~~
@@ -315,7 +316,6 @@ feauter styles
 }
 .team-member-info {
     padding-top: 30px;
-    padding-bottom: 30px;
     padding-left: auto;
     padding-right: auto;
 }
@@ -333,6 +333,37 @@ feauter styles
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--secondary-text-color);
+    margin-bottom: 16px;
+}
+.team-social-items:not(:last-child){
+    margin-right: 10px;
+} 
+
+
+.team-social-links {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 32px;
+    padding-bottom: 30px;
+    padding-left: 32px;
+}
+.team-social-link
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    fill: var(--social-icon-color) ;
+}
+.team-social-link:hover,
+.team-social-link:focus
+{
+    background-color: var(--main-hover-color);
+    fill: var(--main-button-text-color);
 }
 
 /*~~~~~~~~~~~ 
