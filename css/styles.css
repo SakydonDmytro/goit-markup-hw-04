@@ -475,7 +475,8 @@ Footer styles
     align-items: baseline;
 }
 .bottom-site-logo {
-    
+    display: inline-block;
+    margin-bottom: 20px;
     font-weight: 700;
     font-family: 'Raleway';
     font-size: 26px;
@@ -483,6 +484,7 @@ Footer styles
     text-decoration: none;
     color: var(--main-hover-color);
     tab-size: 0px;
+
     
 }
 .site-logo-part-2 {
