@@ -273,10 +273,13 @@ feauter styles
 .feauters-list {
     list-style-type: none;
     display: flex;
-    justify-content: space-between;
+ 
 }
 .features-list-block {
     width: 270px;
+}
+.features-list-block:not(:last-child){
+    margin-right: 30px;
 }
 
 .feauters-chapters {
@@ -346,7 +349,6 @@ feauter styles
     display: flex;
     padding-left: 0;
     margin: 0;
-    justify-content: space-between;
 }
 .team-member {
     
@@ -355,11 +357,13 @@ feauter styles
     0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
+  
+}
+.team-member:not(:last-child){
+    margin-right: 30px;
 }
 .team-member-info {
-    padding-top: 30px;
-    padding-left: auto;
-    padding-right: auto;
+    padding: 30px 32px;
 }
 .team-member-name {
     font-weight: 500;
@@ -387,9 +391,6 @@ feauter styles
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-right: 32px;
-    padding-bottom: 30px;
-    padding-left: 32px;
 }
 .team-social-link
 {
@@ -441,7 +442,7 @@ margin-bottom: 50px;
     border-radius: 4px;
 }
 .client-link {
-    padding: 16px 32px;
+    /* padding: 16px 32px; */
 }
 
 .client-list-item:not(:last-child) {
@@ -488,11 +489,13 @@ Footer styles
     color: var(--main-button-text-color)
 }
 .bottom-address {
-    margin-top: 20px;
+    margin-right: 70px;
     font-style: normal;
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: var(--main-button-text-color)
+    
+
 }
 .address {
     margin-bottom: 9px;
@@ -526,15 +529,15 @@ Footer styles
     display: block;
     margin-bottom: 20px;
 }
-.bottom-address {
-    margin-right: 70px;
-}
 .bottom-social-links {
     display: flex;
     justify-content: left;
     align-items: center;
     list-style-type: none;
     
+}
+.bottom-social-link>.team-social-icon {
+    fill: var(--main-button-text-color);
 }
 .bottom-social-link {
     background-color: var(--bottom-social-link-background);
