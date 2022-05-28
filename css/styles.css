@@ -13,6 +13,7 @@
     --heroic-gradient: rgba(47, 48, 58, 0.4);
     --social-icon-color:#AFB1B8;
     --bottom-social-link-background:rgba(255, 255, 255, 0.1);
+    --activities-img-ontop:rgba(47, 48, 58, 0.8);
 }
 
 /*~~~~~~~~~~~~~~~~~~
@@ -144,11 +145,22 @@ header styles
     display: block;
     padding-bottom: 32px;
     padding-top: 32px;
+    position: relative;
 }
 .navigation-links:last-child {
     margin-right: 0;
 }
+.current::after    {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
 
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: var(--main-hover-color);
+}
 .head-contacts {
     list-style-type: none;
     margin-left: auto;
@@ -175,13 +187,34 @@ header styles
     color: var(--heroic-button-hover);
 }
 
-.navigation-links:hover,
-.navigation-links:focus,
+
 .navigation-contacts:hover,
 .navigation-contacts:focus
+
  {
     color: var(--main-hover-color);
+
+
 }
+.navigation-links:hover:after,
+.navigation-links:focus:after
+ {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: var(--main-hover-color);
+}
+
+.navigation-links:hover,
+.navigation-links:focus {
+    color: var(--main-hover-color);
+}
+
 .navigation-contacts:hover .mail-logo,
 .navigation-contacts:focus .mail-logo,
 .navigation-contacts:hover .phone-icon,
@@ -311,6 +344,9 @@ feauter styles
     justify-content: center;
     margin-bottom: 30px;
 }
+/*~~~~~~~~~~~~ 
+activities styles
+ ~~~~~~~~~~~*/
 
 .activities {
     padding-top: 0;
@@ -327,6 +363,33 @@ feauter styles
     list-style-type: none;
     display: flex;
     justify-content: space-between;
+}
+.activities-imagies {
+    position: relative;
+}
+.activities-imagies::before {
+    text-align: center;
+    bottom: 0px;
+    left: 0px;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 70px;
+    position: absolute; 
+    background-color: rgba(47, 48, 58, 0.8);
+    
+}
+.activities-imagies-description {    
+  
+    position: absolute;
+    bottom: 27px;
+    left: 82px;
+    font-weight: 700;
+    line-height: 1.14;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--main-button-text-color);
 }
 
 /*~~~~~~~~~~
@@ -438,13 +501,22 @@ margin-bottom: 50px;
     justify-content: center;
     width: 170px;
     height: 92px;
-    border: 1px solid var(--social-icon-color) ;
-    border-radius: 4px;
+
+
 }
 .client-link {
-    /* padding: 16px 32px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    height: 92px;
+    border: 1px solid var(--social-icon-color);
+    border-radius: 4px;
 }
-
+.client-item {
+    align-items: center;
+    justify-content: center;
+}
 .client-list-item:not(:last-child) {
     margin-right: 30px;
 }
@@ -452,15 +524,16 @@ margin-bottom: 50px;
 .client-item {
     fill: var(--social-icon-color);
 }
-.client-link:hover .client-item,
-.client-link:focus .client-item {
+.client-link:hover .client-item, 
+.client-link:focus .client-item{
+
     fill: var(--main-hover-color);
 }
-.client-list-item:hover,
-.client-list-item:focus {
+.client-link:hover,
+.client-link:focus {
     border: 1px solid var(--main-hover-color);
+    border-radius: 4px;
 }
-
 /*~~~~~~~~~~~ 
 Footer styles 
 ~~~~~~~~~~~~*/
@@ -490,13 +563,16 @@ Footer styles
 .site-logo-part-2 {
     color: var(--main-button-text-color)
 }
-.bottom-address {
+
+.main {
     margin-right: 70px;
+}
+.bottom-address {
+
     font-style: normal;
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: var(--main-button-text-color)
-    
 
 }
 .address {
